@@ -49,6 +49,8 @@ else
 " terminal color settings
   colors vgod
 endif
+" change font size
+map <C-f><C-s> :set guifont=Osaka-Mono:h
 
 set clipboard=unnamed	" yank to the system register (*) by default
 set showmatch		" Cursor shows matching ) and }
@@ -66,6 +68,7 @@ set copyindent		" copy the previous indentation on autoindenting
 set ignorecase		" ignore case when searching
 set smartcase		" ignore case if search pattern is all lowercase,case-sensitive otherwise
 set smarttab		" insert tabs on the start of a line according to context
+set nu                  " show lines
 
 " disable sound on errors
 set noerrorbells
@@ -75,8 +78,8 @@ set tm=500
 
 " TAB setting{
    set expandtab        "replace <TAB> with spaces
-   set softtabstop=3 
-   set shiftwidth=3 
+   set softtabstop=4 
+   set shiftwidth=4
 
    au FileType Makefile set noexpandtab
 "}      							
@@ -154,14 +157,18 @@ set wmh=0                     " set the min height of a window to 0 so we can ma
 " move around tabs. conflict with the original screen top/bottom
 " comment them out if you want the original H/L
 " go to prev tab 
-map <S-H> gT
+"map <S-H> gT
 " go to next tab
-map <S-L> gt
+"map <S-L> gt
 
 " new tab
 map <C-t><C-t> :tabnew<CR>
 " close tab
 map <C-t><C-w> :tabclose<CR> 
+" prev tab
+map <C-t><C-p> :tabprev<CR>
+" next tab
+map <C-t><C-n> :tabnext<CR>
 
 " ,/ turn off search highlighting
 nmap <leader>/ :nohl<CR>
@@ -247,23 +254,23 @@ autocmd BufNewFile,BufRead *.sass             set ft=sass.css
 set encoding=utf-8                                  
 set termencoding=utf-8
 set fileencoding=utf-8
-set fileencodings=ucs-bom,utf-8,big5,gb2312,latin1
+set fileencodings=ucs-bom,utf-8,gbk,gb2312,latin1
 
 fun! ViewUTF8()
 	set encoding=utf-8                                  
-	set termencoding=big5
+	set termencoding=utf-8
 endfun
 
 fun! UTF8()
 	set encoding=utf-8                                  
-	set termencoding=big5
+	set termencoding=utf-8
 	set fileencoding=utf-8
-	set fileencodings=ucs-bom,big5,utf-8,latin1
+	set fileencodings=ucs-bom,utf-8,gbk,latin1
 endfun
 
-fun! Big5()
-	set encoding=big5
-	set fileencoding=big5
+fun! GBK()
+	set encoding=gbk
+	set fileencoding=gbk
 endfun
 
 
@@ -317,6 +324,8 @@ let g:SuperTabContextDiscoverDiscovery = ["&completefunc:<c-x><c-u>", "&omnifunc
 hi link EasyMotionTarget ErrorMsg
 hi link EasyMotionShade  Comment
 
+" --- ctags
+let Tlist_Ctags_Cmd='/usr/bin/ctags'
 
 " --- TagBar
 " toggle TagBar with F7
