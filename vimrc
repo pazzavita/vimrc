@@ -342,3 +342,4 @@ let g:snipMateAllowMatchingDot = 0
 
 " --- coffee-script
 au BufWritePost *.coffee silent CoffeeMake! -b | cwindow | redraw! " recompile coffee scripts on write
+
