@@ -1,6 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_cnt =5
 let g:netrw_dirhist_1='/usr/local'
 let g:netrw_dirhist_2='/Users/DF/Projects/Works/XStudio/Hs2D'
 let g:netrw_dirhist_3='/Users/DF/.vim.local'
 let g:netrw_dirhist_4='/Users/DF/Projects/Works/XStudio/Hs2D'
+let g:netrw_dirhist_5='/Users/DF/Desktop/ems'

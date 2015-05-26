@@ -154,3 +154,9 @@
 [submodule "bundle/gitignore"]
 	path = bundle/gitignore
 	url = git://github.com/pazzavita/gitignore.git
+[submodule "bundle/ConqueTerm"]
+	path = bundle/ConqueTerm
+	url = git://github.com/pazzavita/ConqueTerm.git
+[submodule "bundle/vim-swift"]
+	path = bundle/vim-swift
+	url = git://github.com/toyamarinyon/vim-swift.git
