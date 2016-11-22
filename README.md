@@ -110,7 +110,7 @@ PLUGINS
 
 * [vim-latex](http://vim-latex.sourceforge.net/): Latex support.
 
-* [OmniCppComplete](http://www.vim.org/scripts/script.php?script_id=1520): C/C++ omni-completion with ctags database.
+<!--* [OmniCppComplete](http://www.vim.org/scripts/script.php?script_id=1520): C/C++ omni-completion with ctags database.-->
 
 * [JavaComplete](http://www.vim.org/scripts/script.php?script_id=1785): Java Omni-completion.
 
